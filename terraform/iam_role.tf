@@ -7,7 +7,7 @@ resource "aws_iam_role" "admin_role" {
       {
         Effect    = "Allow",
         Action    = "sts:AssumeRole",
-        Principal = { "AWS" : "arn:aws:iam::312506926764:root" }
+        Principal = { "AWS" : "arn:aws:iam::566377303192:root" }
       }]
   })
 }
