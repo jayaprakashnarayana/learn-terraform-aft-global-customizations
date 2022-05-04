@@ -1,4 +1,5 @@
 data "aws_caller_identity" "aws_caller_identity" {}
+data "aws_organizations_organization" "aws_organizations_organization" {}
 
 resource "aws_iam_role" "admin_role" {
   name = "admin-xa-role"
@@ -9,7 +10,7 @@ resource "aws_iam_role" "admin_role" {
       {
         Effect    = "Allow",
         Action    = "sts:AssumeRole",
-        Principal = { "AWS" : "arn:aws:iam::${data.aws_caller_identity.aws_caller_identity.account_id}:root" }
+        Principal = { "AWS" : "arn:aws:iam::312506926764:root" }
       }]
   })
 }
